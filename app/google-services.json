@@ -1,0 +1,76 @@
+{
+  "project_info": {
+    "project_number": "1060463878557",
+    "project_id": "fir-demoapps-b8d82",
+    "storage_bucket": "fir-demoapps-b8d82.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1060463878557:android:fedc6695f527f77e73cf74",
+        "android_client_info": {
+          "package_name": "com.udacity.gradle.builditbigger"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1060463878557-19jvuniihrfl15ltbhr4130senqc74gj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDn2PDtKkgv_Ntk5zEnUCvJTRNeoSaTc88"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1060463878557-19jvuniihrfl15ltbhr4130senqc74gj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1060463878557:android:8e00e14751ca005073cf74",
+        "android_client_info": {
+          "package_name": "com.uds.firebasenotificationdemo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1060463878557-mc4m6h4g78a6tk7unrhimglucshunttc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.uds.firebasenotificationdemo",
+            "certificate_hash": "7c71be76b8fba1f515bc6b7a5d9ebbfebe0cc874"
+          }
+        },
+        {
+          "client_id": "1060463878557-19jvuniihrfl15ltbhr4130senqc74gj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDn2PDtKkgv_Ntk5zEnUCvJTRNeoSaTc88"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1060463878557-19jvuniihrfl15ltbhr4130senqc74gj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,2 +1,3 @@
+include ':DisplayJokes'
 include ':JokeTeller'
 include ':app', ':backend'

@@ -1,11 +1,13 @@
 apply plugin: 'com.android.application'
 apply plugin: 'com.google.cloud.tools.endpoints-framework-client'
+apply plugin: 'com.google.gms.google-services'
 
 buildscript {
     repositories {
         jcenter()
     }
     dependencies {
+        // V2: Add the new Endpoints Framework plugin dependencies
         classpath 'com.google.cloud.tools:endpoints-framework-gradle-plugin:2.0.1'
     }
 }
@@ -30,13 +32,17 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+    }
 }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation project(path: ':DisplayJokes')
+    implementation 'com.google.firebase:firebase-ads:19.7.0'
     endpointsServer project(path: ':backend', configuration: 'endpoints')
     implementation 'androidx.appcompat:appcompat:1.2.0'
-    implementation 'com.google.android.gms:play-services-ads:19.7.0'
     implementation 'com.google.api-client:google-api-client:1.30.10'
     implementation 'com.google.http-client:google-http-client-android:1.36.0'
     implementation 'com.google.code.findbugs:jsr305:3.0.2'

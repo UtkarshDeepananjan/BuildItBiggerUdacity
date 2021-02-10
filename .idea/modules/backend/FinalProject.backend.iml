@@ -26,6 +26,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="FinalProject.JokeTeller" />
     <orderEntry type="library" name="Gradle: com.google.endpoints:endpoints-framework:2.2.1" level="project" />
     <orderEntry type="library" name="Gradle: javax.inject:javax.inject:1" level="project" />
     <orderEntry type="library" name="Gradle: com.google.api-client:google-api-client-appengine:1.25.0" level="project" />
