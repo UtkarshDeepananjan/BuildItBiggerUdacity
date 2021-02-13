@@ -76,7 +76,7 @@ public class MainActivityFragment extends Fragment {
     }
 
     private void prepareJoke() {
-        GetJokeAsyncTask getJokeAsyncTask = new GetJokeAsyncTask((GetJokeAsyncTask.OnEventListener<String>) joke -> {
+        EndtPointAsyncTask endtPointAsyncTask = new EndtPointAsyncTask((EndtPointAsyncTask.OnEventListener<String>) joke -> {
             mJoke = joke;
             progressBar.setVisibility(View.GONE);
             if (!mIsTesting) {
@@ -89,7 +89,7 @@ public class MainActivityFragment extends Fragment {
 
 
         });
-        getJokeAsyncTask.execute();
+        endtPointAsyncTask.execute();
     }
 
     private void displayJokeActivity() {

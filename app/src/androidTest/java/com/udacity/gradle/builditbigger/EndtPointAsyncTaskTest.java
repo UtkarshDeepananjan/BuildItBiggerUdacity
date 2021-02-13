@@ -27,19 +27,19 @@ import static org.hamcrest.Matchers.not;
 import static org.junit.Assert.assertThat;
 
 @RunWith(AndroidJUnit4.class)
-public class GetJokeAsyncTaskTest {
+public class EndtPointAsyncTaskTest {
 
     @Test
     public void asyncTaskDoesNotReturnNullOrEmptyString() throws Exception {
         final MainActivityFragment mainActivityFragment = new MainActivityFragment();
 
-        GetJokeAsyncTask getJokeAsyncTask = new GetJokeAsyncTask(new GetJokeAsyncTask.OnEventListener<String>() {
+        EndtPointAsyncTask endtPointAsyncTask = new EndtPointAsyncTask(new EndtPointAsyncTask.OnEventListener<String>() {
             @Override
             public void onSuccess(String joke) {
                 mainActivityFragment.setJoke(joke);
             }
         });
-        getJokeAsyncTask.execute();
+        endtPointAsyncTask.execute();
         Thread.sleep(3000);
 
         assertThat(mainActivityFragment.getJoke(), not(isEmptyString()));

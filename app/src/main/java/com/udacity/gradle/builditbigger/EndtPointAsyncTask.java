@@ -27,13 +27,13 @@ import com.udacity.gradle.builditbigger.backend.myApi.MyApi;
 
 import java.io.IOException;
 
-public class GetJokeAsyncTask extends AsyncTask<Void, Void, String> {
+public class EndtPointAsyncTask extends AsyncTask<Void, Void, String> {
 
     private static MyApi mMyApiService = null;
 
     private OnEventListener<String> mCallBack;
 
-    public GetJokeAsyncTask(OnEventListener callback) {
+    public EndtPointAsyncTask(OnEventListener callback) {
         mCallBack = callback;
     }
 

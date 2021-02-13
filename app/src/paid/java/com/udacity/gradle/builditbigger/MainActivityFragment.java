@@ -31,13 +31,14 @@ public class MainActivityFragment extends Fragment {
 
         jokeButton.setOnClickListener(v -> {
             progressBar.setVisibility(View.VISIBLE);
+            if (!mIsTesting)
             prepareJoke();
         });
         return root;
     }
 
     private void prepareJoke() {
-        GetJokeAsyncTask getJokeAsyncTask = new GetJokeAsyncTask((GetJokeAsyncTask.OnEventListener<String>) joke -> {
+        EndtPointAsyncTask getJokeAsyncTask = new EndtPointAsyncTask((EndtPointAsyncTask.OnEventListener<String>) joke -> {
             mJoke = joke;
             progressBar.setVisibility(View.GONE);
             if (!mIsTesting) {
