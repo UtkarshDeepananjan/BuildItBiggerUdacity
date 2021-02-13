@@ -22,7 +22,6 @@ android {
         versionCode 1
         versionName "1.0"
         multiDexEnabled true
-
         testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
     }
 
@@ -31,6 +30,21 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+    }
+    flavorDimensions "default"
+    productFlavors  {
+        free {
+            applicationId "com.udacity.gradle.builditbigger"
+            dimension "default"
+        }
+        paid {
+            applicationId "com.udacity.gradle.builditbigger"
+            dimension "default"
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
     }
     packagingOptions {
         exclude 'META-INF/DEPENDENCIES'
@@ -41,13 +55,14 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation project(path: ':DisplayJokes')
     implementation 'com.google.firebase:firebase-ads:19.7.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     endpointsServer project(path: ':backend', configuration: 'endpoints')
     implementation 'androidx.appcompat:appcompat:1.2.0'
-    implementation 'com.google.api-client:google-api-client:1.30.10'
-    implementation 'com.google.http-client:google-http-client-android:1.36.0'
+    implementation 'com.google.api-client:google-api-client:1.31.2'
+    implementation 'com.google.http-client:google-http-client-android:1.38.1'
     implementation 'com.google.code.findbugs:jsr305:3.0.2'
-
-    androidTestImplementation('androidx.test.espresso:espresso-core:3.1.0', {
+    implementation "androidx.multidex:multidex:2.0.1"
+    androidTestImplementation('androidx.test.espresso:espresso-core:3.3.0', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
 
